@@ -1,2 +1,2 @@
 # 18
-!8 today counter
+18 today counter
