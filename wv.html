@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Date Display</title>
-    <style>body {
+    <style>
+    body {
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
+        background-color: #272727;
+        color: #fff;
     }
     
     #dateDisplay {
@@ -21,17 +25,42 @@
     }
     
     #date18YearsAgo {
-       display: block;
-      font-size: 2rem;
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 1rem 0;
     }
+    .text-green {
+        color: #6ce36c;
+    }
+    .fa-plus18 {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: center;
+        font-size: 80%;
+        font-weight: bold;
+    }
+
+    .fa-plus18:before {
+        content: "18+";
+    }
+    .warning {
+        color: #fa4b4b;
+    }
+    .small { font-size: 0.8rem;}
     
     </style>
 </head>
 <body>
     <div id="dateDisplay">
-    <div class="logo"><img src = "https://www.playground.ca/img/header/playground-spade-logo.png?1709667149"></div>
-        <p>Date 18 Years Ago: <span id="date18YearsAgo"></span></p>
-        <p>Last Updated: <br/><span id="currentDate"></span></p>
+        <span class="fa-stack fa-2x mb-4 warning">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <span class="fa fa-stack-1x fa-inverse fa-plus18"></span>
+        </span>
+    <!-- <div class="logo"><img src = "https://www.playground.ca/img/header/playground-spade-logo.png?1709667149"></div> -->
+        <p id="date18YearsAgo" class="text-green"></p>
+        <p class="warning"><span class="text-green">&uarr;</span> If born after this date <span class="text-green">&uarr;</span><br/>they are not 18</p>
+        <p>Updated: <br/><span id="currentDate"></span></p>
     </div>
 </body>
 </html>
