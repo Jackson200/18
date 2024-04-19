@@ -18,6 +18,7 @@
     
     #dateDisplay {
         text-align: center;
+        padding-top: 6px;
     }
     
     .logo img {
@@ -26,10 +27,12 @@
     
     #date18YearsAgo {
         display: block;
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: bold;
         text-transform: uppercase;
-        margin: 1rem 0;
+    }
+    p {
+        margin: 0.7rem 0;
     }
     .text-green {
         color: #6ce36c;
@@ -46,8 +49,10 @@
     }
     .warning {
         color: #fa4b4b;
+        font-weight: bold;
     }
     .small { font-size: 0.8rem;}
+    .smaller { font-size: 0.7rem;}
     
     </style>
 </head>
@@ -59,8 +64,8 @@
         </span>
     <!-- <div class="logo"><img src = "https://www.playground.ca/img/header/playground-spade-logo.png?1709667149"></div> -->
         <p id="date18YearsAgo" class="text-green"></p>
-        <p class="warning"><span class="text-green">&uarr;</span> If born after this date <span class="text-green">&uarr;</span><br/>they are not 18</p>
-        <p>Updated: <br/><span id="currentDate"></span></p>
+        <p class="small warning"><span class="text-green">&uarr;</span> If born after this date <span class="text-green">&uarr;</span><br/>they are not 18</p>
+        <p class="smaller">Updated: <br/><span id="currentDate"></span></p>
     </div>
 </body>
 </html>
